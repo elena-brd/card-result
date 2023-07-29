@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f4f4f4;
+    color: #181818;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 980px;
+    background: #fff;
+    margin: 3rem auto;
+    border-radius: 10px;
+    box-shadow: 0 7px 10px -2px rgba(172, 172, 172, 0.5);
+    padding: 2.5rem;
+}
+
+/* filter */
+#filter .filter-results {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+#filter .results,
+#filter .display-results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#filter .results p {
+    padding: 0 0.4rem;
+}
+
+#filter .results span {
+    background: #1d3557;
+    color: #fff;
+    font-size: 0.9rem;
+    padding: 0.1rem 0.5rem;
+    border-radius: 50%;
+    margin-left: 1rem;
+}
+
+#filter .display-results {
+    border: none;
+    background: #1d3557;
+    color: #fff;
+    margin-left: 0.5rem;
+}
+
+#filter .display-results .btn-remove {
+    margin-left: 1rem;
+    background: none;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+#filter .display-results .btn-remove:hover {
+    color: #a8dadc;
+}
+
+
+/* card */
+#card img {
+    width: 100%;
+}
+
+#card .total {
+    color: #7e7e7e;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+#card .card-results {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+#card .card-item {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+#card .card-item h3 {
+    padding-top: 1rem;
+}
+
+#card .card-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 3px 2px -2px rgba(172, 172, 172, 0.5);
+}
+
+@media(max-width: 750px) {
+
+    #filter .results,
+    #filter .display-results {
+        margin: 1rem 0;
+        justify-content: space-between;
+    }
+
+    #filter .filter-results {
+        display: block;
+    }
+
+    #card .card-results {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    #card .card-item:hover {
+        transform: translateY(0);
+    }
+
+    .container {
+        max-width: 400px;
+    }
+}
